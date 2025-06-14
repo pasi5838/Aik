@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tebak Nama Hewan</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    body { font-family: sans-serif; text-align: center; background: #f2f2f2; padding: 20px; }
+    #question { font-size: 1.5em; margin-bottom: 20px; }
+    #lives { color: red; font-size: 1.2em; }
+    #result { margin: 20px; }
+    #restart { display: none; padding: 10px 20px; }
+    canvas { position: fixed; top: 0; left: 0; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <h1>Tebak Nama Hewan</h1>
+  <div id="lives">❤️❤️❤️</div>
+  <div id="question">Memuat soal...</div>
+  <input type="text" id="answer" placeholder="Ketik jawaban..." />
+  <button onclick="submitAnswer()">Jawab</button>
+  <div id="result"></div>
+  <button id="restart" onclick="location.reload()">Restart</button>
+  <canvas id="confetti"></canvas>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "Tebak Nama Hewan",
+  "short_name": "TebakHewan",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "Game tebak-tebakan hewan versi offline",
+  "icons": []
+}
